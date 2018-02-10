@@ -14,7 +14,7 @@ object RFormula {
     //Create a SparkContext to initialize Spark
     val conf = new SparkConf()
     conf.setMaster("local")
-    conf.setAppName("CreditScore")
+    conf.setAppName("CreditScoreFormula")
     val sc = new SparkContext(conf)
 
     val spark = SparkSession.builder().appName("Spark In Action").master("local").getOrCreate()
