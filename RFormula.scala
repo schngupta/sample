@@ -20,6 +20,7 @@ object RFormula {
     val spark = SparkSession.builder().appName("Spark In Action").master("local").getOrCreate()
 
     val dataset = spark.createDataFrame(Seq(
+	  (6, "US", 16, 1),
       (7, "US", 18, 1),
       (8, "CA", 12, 0),(9, "NZ", 15, 0),(10, "NZ", 15, 1),(11, "NZ", 15, 0)
     )).toDF("id", "country", "hour", "clicked")
