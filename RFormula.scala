@@ -26,7 +26,6 @@ object RFormula {
     )).toDF("id", "country", "hour", "clicked")
 
     val formula = new RFormula().setFormula("clicked ~ country + hour").setFeaturesCol("features").setLabelCol("label")
-	println("hello, world!")
     val output1 = formula.fit(dataset).transform(dataset)
 	val output2 = formula.fit(dataset).transform(dataset)
     output.show()
